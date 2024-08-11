@@ -1,7 +1,7 @@
 <x-layout>
     <x-slot:heading>
-        About
+        Home
     </x-slot:heading>
 
-    <h1>About page</h1>
+    <h1>Home page</h1>
 </x-layout>
