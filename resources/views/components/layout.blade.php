@@ -1,17 +1,17 @@
-<!DOCTYPE html>
-<html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
+<!doctype html>
+<html lang="en" class="h-full bg-gray-100">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="viewport"
+        content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Neo Mokhele | Laravel</title>
     <link rel="icon" href="https://laracasts.com/images/logo/logo-triangle.svg" type="image/svg">
-
-    <title>Laravel Bootcamp</title>
-
     <script src="https://cdn.tailwindcss.com"></script>
 </head>
 
-<body class="font-sans antialiased dark:bg-black dark:text-white/50">
+<body class="h-full">
     <div class="min-h-full">
         <nav class="bg-gray-800">
             <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
@@ -19,20 +19,17 @@
                     <div class="flex items-center">
                         <div class="flex-shrink-0">
                             <img class="h-8 w-8" src="https://laracasts.com/images/logo/logo-triangle.svg"
-                                alt="laracasts-logo">
+                                alt="company-logo">
                         </div>
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline space-x-4">
-                                <a href="/"
-                                    class="rounded-md bg-gray-900 px-3 py-2 text-sm font-medium text-white"
-                                    aria-current="page">Home</a>
-                                <a href="/about"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
-                                <a href="/contact"
-                                    class="rounded-md px-3 py-2 text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                                <x-nav-link href="/" :active="request()->is('/')">Home</x-nav-link>
+                                <x-nav-link href="/jobs" :active="request()->is('jobs')">Jobs</x-nav-link>
+                                <x-nav-link href="/contact" :active="request()->is('contact')">Contact</x-nav-link>
                             </div>
                         </div>
                     </div>
+
                     <div class="hidden md:block">
                         <div class="ml-4 flex items-center md:ml-6">
                             <button type="button"
@@ -55,13 +52,13 @@
                                         <span class="absolute -inset-1.5"></span>
                                         <span class="sr-only">Open user menu</span>
                                         <img class="h-8 w-8 rounded-full"
-                                            src="https://laracasts.com/images/lary-ai-face.svg" alt="user-image">
+                                            src="https://laracasts.com/images/lary-ai-face.svg" alt="">
                                     </button>
                                 </div>
-
                             </div>
                         </div>
                     </div>
+
                     <div class="-mr-2 flex md:hidden">
                         <!-- Mobile menu button -->
                         <button type="button"
@@ -88,19 +85,18 @@
             <!-- Mobile menu, show/hide based on menu state. -->
             <div class="md:hidden" id="mobile-menu">
                 <div class="space-y-1 px-2 pb-3 pt-2 sm:px-3">
-                    <a href="/" class="block rounded-md bg-gray-900 px-3 py-2 text-base font-medium text-white"
+                    <a href="/" class="bg-gray-900 text-white block rounded-md px-3 py-2 text-base font-medium"
                         aria-current="page">Home</a>
-                    <a href="/about"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                    <a href="/jobs"
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Jobs</a>
                     <a href="/contact"
-                        class="block rounded-md px-3 py-2 text-base font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Contact</a>
+                        class="text-gray-300 hover:bg-gray-700 hover:text-white block rounded-md px-3 py-2 text-base font-medium">Contact</a>
                 </div>
-
                 <div class="border-t border-gray-700 pb-3 pt-4">
                     <div class="flex items-center px-5">
                         <div class="flex-shrink-0">
                             <img class="h-10 w-10 rounded-full" src="https://laracasts.com/images/lary-ai-face.svg"
-                                alt="user-image">
+                                alt="">
                         </div>
                         <div class="ml-3">
                             <div class="text-base font-medium leading-none text-white">Neo Mokhele</div>
@@ -128,7 +124,7 @@
         </header>
 
         <main>
-            <div class="mx-auto max-w-7xl px-4 py-6 sm:px-6 lg:px-8">
+            <div class="mx-auto max-w-7xl py-6 sm:px-6 lg:px-8">
                 {{ $slot }}
             </div>
         </main>
