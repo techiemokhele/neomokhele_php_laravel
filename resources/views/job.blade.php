@@ -6,6 +6,6 @@
     <h2 class="font-bold text-lg">{{ $job['title'] }}</h2>
 
     <p>
-        This job pays {{ $job['salary'] }} per month.
+        This job pays R{{ number_format($job['salary'], 0, ',', ',') }} per month.
     </p>
 </x-layout>
